@@ -12,17 +12,17 @@ typedef struct
 {
     HNode items[MAX_HEAP + 1];
     int num;
-} Heap;
+} MaxHeap;
 
-void initHeap(Heap *pheap)
+void initHeap(MaxHeap *pheap)
 {   // make a heap empty //
     pheap->num = 0;
 } 
-bool isHeapEmpty(Heap *pheap)
+bool isHeapEmpty(MaxHeap *pheap)
 {   // check whether a heap is empty //
     return pheap->num == 0;
 }
-bool isHeapFull(Heap *pheap)
+bool isHeapFull(MaxHeap *pheap)
 {   // check whether a heap is full //
     return pheap->num == MAX_HEAP;
 }
@@ -39,7 +39,7 @@ int getRChild(int idx)
 {   // get a right child index for a given index //
     return idx * 2 + 1;
 }
-int getHighPriorityChild(Heap *pheap, int idx)
+int getHighPriorityChild(MaxHeap *pheap, int idx)
 {   // get a child index with high priority between two child nodes //
     if(getLChild(idx) > pheap->num)
     {   // no child nodes exist //
@@ -57,7 +57,7 @@ int getHighPriorityChild(Heap *pheap, int idx)
     }
 }
 
-void insertItem(Heap *pheap, Data data, int priority)
+void insertItem(MaxHeap *pheap, Data data, int priority)
 {   // insert a node to the heap //
     HNode newNode;
     int idx = pheap->num + 1;
@@ -80,7 +80,7 @@ void insertItem(Heap *pheap, Data data, int priority)
     pheap->items[idx] = newNode;
     pheap->num++;
 }
-Data deleteItem(Heap *pheap)
+Data deleteItem(MaxHeap *pheap)
 {   // remove the maximum data from the heap //
     Data max = pheap->items[1].data;
     HNode last = pheap->items[pheap->num];

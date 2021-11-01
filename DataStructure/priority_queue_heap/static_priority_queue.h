@@ -1,6 +1,6 @@
-#include "static_heap.h"
+#include "static_max_heap.h"
 
-typedef Heap PQueue;
+typedef MaxHeap PQueue;
 
 void initPQueue(PQueue *ppqueue)
 {
