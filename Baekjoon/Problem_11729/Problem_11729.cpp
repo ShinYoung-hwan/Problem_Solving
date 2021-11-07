@@ -1,28 +1,24 @@
 #include <iostream>
+#include <cstdio>
 #include <cmath>
-/*Basic Algorithm
-first, we move the smaller dist to aux
-then, we move the larger disk to dest
-and finally, we move the smaller disk from aux to dest
-*/
+
 using namespace std;
 
-int RepofHanoi(int num)
+int repofHanoi(const int num)
 {
     return pow(2, num) - 1;
 }
 
-void Hanoi(int num, int src, int dst, int aux)
+void Hanoi(const int num, const int src, const int dst, const int aux)
 {
-    
     if(num == 1)
     {
-         cout << src << ' ' << dst << endl;
+        printf("%d %d\n", src, dst);
     }
     else
     {
         Hanoi(num - 1, src, aux, dst);
-        cout << src << ' ' << dst << endl;
+        printf("%d %d\n", src, dst);
         Hanoi(num - 1, aux, dst, src);
     }
 }
@@ -31,7 +27,7 @@ int main(void)
 {
     int N; cin >> N;
 
-    cout << RepofHanoi(N) << endl;
+    cout << repofHanoi(N) << endl;
 
     Hanoi(N, 1, 3, 2);
 

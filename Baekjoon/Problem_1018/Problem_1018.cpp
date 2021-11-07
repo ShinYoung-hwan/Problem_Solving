@@ -1,97 +1,85 @@
 #include <iostream>
-#include <string>
+#include <vector>
+#include <cstring>
 
 using namespace std;
 
-string* Set_Board(size_t N)
+class ChessData
 {
-    string* Board = new string[N];
+private:
+    int row;
+    int col;
+    vector<string> chessBoard;
+public:
+    void setRow(const int row){ this->row = row; }
+    int getRow(){ return this->row; }
+    void setCol(const int col){ this->col = col; }
+    int getCol(){ return this->col; }
+    void setChessBoard(const string str){ this->chessBoard.push_back(str); }
+    vector<string> getChessBoard(){ return this->chessBoard; }
+    string getChessBoardRow(const int index){ return this->chessBoard.at(index); }
+    char getChessBoardChar(const int row, const int col){ return this->chessBoard.at(row).at(col); }
+};
+
+void setData(ChessData &chessData)
+{
+    int N, M;
+    string str;
+
+    cin >> N >> M;
+    chessData.setRow(N); chessData.setCol(M);
     for(int i = 0; i < N; i++)
     {
-        cin >> Board[i];
+        cin >> str;
+        chessData.setChessBoard(str);
     }
-
-    return Board;
 }
 
-int Get_MinErr(string* Board, int N, int M)
+int compare8X8(ChessData &chessData, int x, int y)
 {
-    int min1 = 0, min2 = 0;
+    int ret1 = 0, ret2 = 0;
+    string str1 = "WBWBWBWB";
+    string str2 = "BWBWBWBW";
 
-    for(int i = 0; i < N; i++)
+    for(int i = 0; i < 8; i++)
     {
-        if(i % 2 == 0)
+        for(int j = 0; j < 8; j++)
         {
-            for(int j = 0; j < M; j++)
+            if(i % 2 == 0)
             {
-                if(j % 2 == 0)
-                {
-                    if(Board[i].at(j) == 'B') min1++;
-                }
-                else
-                {
-                    if(Board[i].at(j) == 'W') min1++;
-                }
+                if(chessData.getChessBoardChar(x+i, j+y) != str1.at(j)) ret1++;
+                if(chessData.getChessBoardChar(x+i, j+y) != str2.at(j)) ret2++;
+            } else
+            {
+                if(chessData.getChessBoardChar(x+i, j+y) != str2.at(j)) ret1++;
+                if(chessData.getChessBoardChar(x+i, j+y) != str1.at(j)) ret2++;
             }
+            
         }
-        else
+    }
+    return min(ret1, ret2);
+}
+
+int getMinChangeNum(ChessData &chessData)
+{
+    int ret = 64;
+
+    for(int i = 0; i <= chessData.getRow()-8; i++)
+    {
+        for(int j = 0; j <= chessData.getCol()-8; j++)
         {
-            for(int j = 0; j < M; j++)
-            {
-                if(j % 2 == 0)
-                {
-                    if(Board[i].at(j) == 'W') min1++;
-                }
-                else
-                {
-                    if(Board[i].at(j) == 'B') min1++;
-                }
-            }
+            ret = min(ret, compare8X8(chessData, i, j));
         }
     }
 
-    for(int i = 0; i < N; i++)
-    {
-        if(i % 2 == 0)
-        {
-            for(int j = 0; j < M; j++)
-            {
-                if(j % 2 == 0)
-                {
-                    if(Board[i].at(j) == 'W') min2++;
-                }
-                else
-                {
-                    if(Board[i].at(j) == 'B') min2++;
-                }
-            }
-        }
-        else
-        {
-            for(int j = 0; j < M; j++)
-            {
-                if(j % 2 == 0)
-                {
-                    if(Board[i].at(j) == 'B') min2++;
-                }
-                else
-                {
-                    if(Board[i].at(j) == 'W') min2++;
-                }
-            }
-        }
-    }
-
-    return (min1 > min2 ? min2 : min1);
+    return ret;
 }
 
 int main(void)
 {
-    int N, M; cin >> N >> M;
+    ChessData chessData; setData(chessData);
 
-    string* Board = Set_Board(N);
-
-    cout << Get_MinErr(Board, N, M) << endl;
+    cout << getMinChangeNum(chessData) << endl;
 
     return 0;
 }

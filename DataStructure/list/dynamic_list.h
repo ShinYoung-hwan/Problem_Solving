@@ -1,131 +1,112 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef enum{ False, True } bool;
+typedef enum{ False, True }bool;
 typedef int Data;
 
-typedef struct _Node
-{
-    Data item;
-    struct _Node *next;
-} Node;
-
 typedef struct
+{	/* This is a data structure that performs like vector in C++ */
+	int size;
+	int curLen;
+	Data *items;
+} DynamicList;
+
+void initDynamicList(DynamicList *plist)
+{	// initialize the dynamicList //
+	plist->size = 1;
+	plist->curLen = 0;
+	plist->items = (Data *)malloc(sizeof(Data)*plist->size);
+}
+void destroyDynamicList(DynamicList *plist)
 {
-    Node *head;
-    int len;
-} LinkedList;
-
-void initLinkedList(LinkedList *plist)
-{   // Make a list empty //
-    // create a dummy node //
-    plist->head = (Node *)malloc(sizeof(Node));
-    plist->head->next = NULL;
-    plist->len = 0;
+	plist->size = 1;
+	plist->curLen = 0;
+	free(plist->items);
 }
-bool isLinkedListEmpty(LinkedList *plist)
-{   // check whether the list is empty //
-    return plist->len == 0;
+bool isListFull(DynamicList *plist)
+{	
+	return plist->size == plist->curLen;
 }
-
-void insertMiddle(LinkedList *plist, int pos, Data item)
-{   // insert an item at the k-th position
-    Node *cur, *newNode;
-    if(pos < 0 || pos > plist->len)
-    {
-        perror("out of range of list");
-        exit(1);
-    }
-
-    // create a new node //
-    newNode = (Node *)malloc(sizeof(Node));
-    newNode->item = item;
-    newNode->next = NULL;
-
-    // Move the cur pointer to the (k-1)-th position
-    cur = plist->head;
-    for(int i = 0; i < pos; i++)
-        cur = cur->next;
-    
-    // insert the new node to the k-th position
-    newNode->next = cur->next;
-    cur->next = newNode;
-    plist->len++;
-}
-void removeMiddle(LinkedList *plist, int pos)
-{   // remove an item at the k-th position //
-    Node *cur, *temp;
-    if(isLinkedListEmpty(plist) || pos < 0 || pos >= plist->len)
-    {
-        perror("out of range of list");
-        exit(1);
-    }
-
-    // move the cur pointer to the (k-1)-th position //
-    for(int i = 0; i < pos; i++)
-        cur = cur->next;
-    
-    // remove the node to the k-th position //
-    temp = cur->next;
-    temp->next = cur->next->next;
-    plist->len--;
-    free(temp);
-}
-Data readItem(LinkedList *plist, int pos)
-{   // read an item at the k-th position //
-    Node *cur;
-    if(isLinkedListEmpty(plist) || pos < 0 || pos >= plist->len)
-    {
-        perror("out of range of list");
-        exit(1);
-    }
-
-    // move the cur pointer to the k-th position //
-    cur = plist->head->next;
-    for(int i = 0; i < pos; i++)
-        cur = cur->next;
-    
-    return cur->item;
-}
-
-void printLinkedList(LinkedList *plist)
+bool isListEmpty(DynamicList *plist)
 {
-    Node *cur;
-    if(isLinkedListEmpty(plist))
-    {
-        perror("out of range of list");
-        exit(1);
-    }
-
-    cur = plist->head;
-    for(int i = 0; i < plist->len; i++)
-        printf("%dth: %d -> ", i+1, cur->item);
-    //for(Node *cur = plist->head->next; cur != NULL; cur = cur->next)
-    //    printf("%d -> ", cur->item);
-    printf("NULL");    
-}
-void clearList(LinkedList *plist)
-{
-    while(plist->head->next != NULL)
-        removeMiddle(plist, 0);
-    free(plist->head);
+	return plist->curLen == 0;
 }
 
-LinkedList *concatenate(LinkedList *plist1, LinkedList *plist2)
+void adjustDynamicList(DynamicList *plist)
+{	// double the list size //
+	Data *backup = plist->items;
+	Data *tmpptr;
+	if(tmpptr = realloc(plist->items, 2*sizeof(Data)*(plist->size)))
+	{	// none error //
+		plist->size = 2 * plist->size;
+		plist->items = tmpptr;
+	}
+	else
+	{	// error case //
+		printf("Reallocation failed\n");
+		plist->items = backup;
+	}
+}
+void addKthItem(DynamicList *plist, Data item, int k)
+{	// add item in kth position //
+	if(isListFull(plist))
+	{
+		adjustDynamicList(plist);
+	}
+
+	for(int i = plist->curLen; i > k; i--)
+	{
+		plist->items[i] = plist->items[i-1];
+	}
+	plist->items[k] = item;
+	plist->curLen++;
+}
+void addLastItem(DynamicList *plist, Data item)
+{	// add item in last position //
+	if(isListFull(plist))
+	{
+		adjustDynamicList(plist);
+	}
+
+	plist->items[plist->curLen++] = item;
+}
+void removeKthItem(DynamicList *plist, int k)
+{	// remove item in k-th position //
+	if(k < 0 || k > plist->curLen)
+	{
+		printf("Out of range, the current length is %d\n", plist->curLen);
+		exit(1);
+	}
+
+	for(int i = k; i < (plist->curLen-1); i++)
+	{
+		plist->items[i] = plist->items[i+1];
+	}
+	plist->curLen--;
+}
+void removeLastItem(DynamicList *plist)
 {
-    if(plist1->head->next == NULL) return plist2;
-    else if(plist2->head->next == NULL) return plist1;
-    else
-    {   // move the current pointer to the last position //
-        Node *cur = plist1->head->next;
-        while(cur->next != NULL)
-            cur = cur->next;
+	plist->curLen--;
+}
 
-        // link the curent poointer to the second list;
-        cur->next = plist2->head->next;
+Data getKthItem(DynamicList *plist, int k)
+{	// return kth item is list //
+	if(k < 0 || k > plist->curLen)
+	{
+		printf("Out of range, the current length is %d\n", plist->curLen);
+		exit(1);
+	}
 
-        // remove the dummy node from the second list //
-        free(plist2->head);
-        return plist1;;
-    }
+	return plist->items[k];
+}
+
+void printDynamicListInfo(DynamicList *plist)
+{	// print dynamic list information //
+	printf("Dynamic List\n");
+	printf("Size: %d\n", plist->size);
+	printf("Current Length: %d\n", plist->curLen);
+	printf("Items: ");
+	for(int i = 0; i < plist->curLen; i++)
+		printf("%d ", getKthItem(plist, i));
+	printf("NULL\n");
 }
