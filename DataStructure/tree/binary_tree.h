@@ -1,6 +1,8 @@
 /* Binary Tree header file
  * This header file is for each binary tree structure and operations.
  */
+#include <stdio.h>
+#include <stdlib.h>
 
 typedef int BData; // data type for item //
 #define max(a,b)  (((a) > (b)) ? (a) : (b))  // get max of two numbers //

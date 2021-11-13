@@ -9,7 +9,6 @@ unsigned long long Factorial(const int n)
     return output;
 }
 
-
 unsigned long long Permutation(const int n, const int r)
 {
     unsigned long long output = 1;

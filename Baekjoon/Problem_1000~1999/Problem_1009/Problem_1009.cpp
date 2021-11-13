@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int Get_ComNum(const int a, const int b)
+int get_ComNum(const int a, const int b)
 {
     switch(a % 10)
     {
@@ -48,7 +48,7 @@ int main(void)
     {
         int a, b; cin >> a >> b;
 
-        cout << Get_ComNum(a, b) << endl;
+        cout << get_ComNum(a, b) << endl;
     }
 
     return 0;

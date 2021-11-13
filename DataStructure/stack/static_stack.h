@@ -1,6 +1,6 @@
 #define MAX_STACK 100
 
-typedef enum { False, True} bool;
+typedef enum { False, True } bool;
 typedef int Data;
 
 typedef struct
@@ -40,20 +40,22 @@ void pushStack(Stack *pstack, Data item)
     }
     pstack->items[++(pstack->top)] = item;
 }
-void popStack(Stack *pstack)
+Data popStack(Stack *pstack)
 {
+    Data item = peekStack(pstack);
     if(isStackEmpty(pstack))
     {
         perror("The stack is empty!\n");
         exit(1);
     }
     (pstack->top)--;
+    return item;
 }
 void popMultiStack(Stack *pstack, int times)
 {
 	if(times <= 0)
 		perror("Can not pop smaller than 1 times");
 
-	for(int i = 0; i < time; i++)
+	for(int i = 0; i < times; i++)
 		popStack(pstack);
 }
