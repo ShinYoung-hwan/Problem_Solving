@@ -5,17 +5,14 @@
 
 using namespace std;
 
-bool compare(string &str1, string &str2)
-{   // some issue in here //
-    if(str1.length() < str2.length()) return true;
-    else if(str1.length() == str2.length())
-    {
-        for(int i = 0; i < str1.length(); i++)
-        {
-            if(str1.at(i) < str2.at(i)) return true;
-        }
+bool compare(string str1, string str2)
+{   
+    if(str1.length() == str2.length()) 
+    {   // if same length, dictionary order //
+        return str1 < str2;
     }
-    return false;
+    // if different length //
+    return str1.length() < str2.length();
 }
 
 void setDatas(vector<string> &datas, const int N)
@@ -24,18 +21,19 @@ void setDatas(vector<string> &datas, const int N)
     for(int i = 0; i < N; i++)
     {
         cin >> str;
-        datas.push_back(str);
+        if(find(datas.begin(), datas.end(), str) == datas.end())
+        {   // if the input is already found, do not store //
+            datas.push_back(str);
+        }
     }
 }
 
 void printDatas(vector<string> &datas, const int N)
 {
-    for(int i = 0; i < N-1; i++)
-    {
-        if(datas.at(i) != datas.at(i+1))
-            cout << datas.at(i) << endl;
+    for(string item: datas)
+    {   // print all items in vector //
+        cout << item << '\n';
     }
-    cout << datas.at(N-1) << endl;
 }
 
 int main(void)

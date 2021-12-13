@@ -1,3 +1,9 @@
-DataStructure/debug.c
-
 *.out
+
+debug.c
+
+run.sh
+
+Makefile
+
+.vscode
