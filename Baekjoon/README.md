@@ -19,3 +19,4 @@
  - [Problem_4375: 1](Problem_4000~4999/Problem_4375)
  - [Problem_17427: 약수의합 2](Problem_17000~17999/Problem_17427/)
  - [Problem_17425: 약수의 합](Problem_17000~17999/Problem_17425/)
+ - [Problem_1654: 랜선자르기](Problem_1000~1999/Problem_1654)
