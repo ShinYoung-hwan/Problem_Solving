@@ -1,17 +1,17 @@
 # Datastructures Repository
  - Covering basic datastrutures using c style codes.
 
-## [Stack](./stack/README.md)
+## [Stack](./stack/)
 
-## [Queue](./queue/README.md)
+## [Queue](./queue/)
 
-## [Deque](./deque/README.md)
+## [Deque](./deque/)
 
-## [List](./list/README.md)
+## [List](./list/)
 
-## [Tree]()
+## [Tree](./tree/)
 
-## [Binary Tree]()
+## [Binary Tree](./tree)
 
 ## [Priority Queue]()
 
