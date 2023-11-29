@@ -7,3 +7,5 @@ run.sh
 Makefile
 
 .vscode
+
+.DS_Store
