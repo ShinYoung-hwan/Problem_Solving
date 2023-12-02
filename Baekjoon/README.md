@@ -22,5 +22,7 @@
  - [Problem_1654: 랜선자르기](Problem_1000~1999/Problem_1654)
  - [Problem_1463: 1로만들기](Problem_1000~1999/Problem_1463)
  - [Problem_2579: 계단 오르기](Problem_2000~2999/Problem_2579)
+ - [Problem_2805: 나무자르기](Problem_2000~2999/Problem_2805)
  ## 공부해야할 부분
   - 플로이드 워셜 알고리즘
+  - 매개변수 탐색
