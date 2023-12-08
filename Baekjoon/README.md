@@ -24,9 +24,11 @@
  - [Problem_2579: 계단 오르기](Problem_2000~2999/Problem_2579)
  - [Problem_2805: 나무자르기](Problem_2000~2999/Problem_2805)
  - [Problem_5525: IOIOI](Probme_5000~5999/Problem_5525)
+ - [Problem_7662: 이중 우선순위 큐](Problem_7000~7999/Problem_7662)
  
  ## 공부해야할 부분
   - 플로이드 워셜 알고리즘
   - 매개변수 탐색
   - KMP 알고리즘
   - 중국인의 나머지 정리
+  - 이중 우선순위 큐
