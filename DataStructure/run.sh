@@ -1,5 +1,5 @@
 make
 
-time ./debug.out
+time ./main.out
 
 make clean

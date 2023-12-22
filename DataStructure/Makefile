@@ -1,7 +1,7 @@
 compiler=gcc
 flag=-g -Wall -o
-target=debug.out
-source=debug.c
+target=main.out
+source=main.c
 
 $(target): $(source)
 	$(compiler) $(flag) $@ $^
