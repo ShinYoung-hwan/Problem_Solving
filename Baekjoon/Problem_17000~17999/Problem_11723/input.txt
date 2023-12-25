@@ -1,0 +1,6 @@
+5
+all
+remove 1
+remove 2
+check 1
+check 2

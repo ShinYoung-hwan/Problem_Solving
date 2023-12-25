@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX_DEQ 10
+#define MAX_DEQ 100
 
 typedef enum { false, true } bool;
 typedef int Data;
