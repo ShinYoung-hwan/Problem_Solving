@@ -4,7 +4,7 @@ target=main.out
 source=main.c
 
 $(target): $(source)
-	$(compiler) $(flag) $@ $^
+	$(compiler) $(flag) $@ $^ -w
 
 clean:
 	rm $(target)
