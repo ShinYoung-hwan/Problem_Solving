@@ -1,4 +1,4 @@
-# [](https://www.acmicpc.net/problem/21736)
+# [헌내기는 친구가 필요해](https://www.acmicpc.net/problem/21736)
 
 |시간 제한|메모리 제한|난이도|
 |:-------:|:---------:|:---:|
