@@ -1,17 +1,5 @@
 # [Baekjoon Problem Solving](https://www.acmicpc.net/)
 
-## Unsolved
- - [Problem_1005: ACM Craft](Problem_1000~1999/Problem_1005)
- - [Problem_1016: 제곱 ㄴㄴ 수](Problem_1000~1999/Problem_1016)
- - [Problem_1075: 나누기](Problem_1000~1999/Problem_1075)
- - [Problem_2748: 피보나치 수3](Problem_2000~2999/Problem_2749)
- - [Problem_2960: 에라토스테네스의 체](Problem_2000~2999/Problem_2960)
- - [Problem_2981: 검문](Problem_2000~2999/Problem_2981)
- - [Problem_18870: 좌표압축](Problem_18000~18999/Problem_18870)
- - [Problem_9663: N-Queen](Problem_9000~9999/Problem_9663)
- - [Problem_1149: RGB 거리](Problem_1000~1999/Problem_1149)
- - [Problem_1920: 수찾기](Problem_1000~1999/Problem_1920)
-
 ## Resolve
  - [Problem_1065: 한수](Problem_1000~1999/Problem_1065)
  - [Problem_10814: 나이순 정렬](Problem_10000~10999/Problem_10814)
@@ -25,6 +13,7 @@
  - [Problem_2805: 나무자르기](Problem_2000~2999/Problem_2805)
  - [Problem_5525: IOIOI](Probme_5000~5999/Problem_5525)
  - [Problem_7662: 이중 우선순위 큐](Problem_7000~7999/Problem_7662)
+ - [Problem_1629: 곱셈](Problem_1000~1999/Problem_1629/)
  
  ## 공부해야할 부분
   - 플로이드 워셜 알고리즘
@@ -33,3 +22,4 @@
   - 중국인의 나머지 정리
   - 이중 우선순위 큐
   - 유니온 파인드 알고리즘
+  - 분할 정복을 이용한 거듭제곱
