@@ -14,6 +14,7 @@
  - [Problem_5525: IOIOI](Probme_5000~5999/Problem_5525)
  - [Problem_7662: 이중 우선순위 큐](Problem_7000~7999/Problem_7662)
  - [Problem_1629: 곱셈](Problem_1000~1999/Problem_1629/)
+ - [Problem_1918: 후위표기식](Problem_1000~1999/Problem_1918/)
  
  ## 공부해야할 부분
   - 플로이드 워셜 알고리즘
