@@ -13,9 +13,9 @@
 
 ## [Binary Tree](./tree)
 
-## [Priority Queue]()
+## [Priority Queue](./priority_queue_heap/)
 
-## [Binary Search Tree]()
+## [Binary Search Tree](./binary_search_tree/)
 
 ## [AVL Tree]()
 
