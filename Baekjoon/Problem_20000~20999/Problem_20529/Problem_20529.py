@@ -2,45 +2,33 @@ import sys
 from collections import Counter
 from itertools import combinations
 
-input = lambda : sys.stdin.readline().rstrip()
+input = lambda: sys.stdin.readline().rstrip()
 
-def get_distance(a, b=None, c=None):
-    # a, b, c 세사람의 심리적인 거리 구하기
-    distance = 0
-    
-    mbtis = [mbti for mbti in [a, b, c] if mbti is not None]
-    
-    for m, n in combinations(mbtis, 2):
-        for i in range(4):
-            if m[i] != n[i]:
-                distance += 1
+def get_distance(p1, p2):
+    # p1와 p2의 심리적인 거리 구하기
+    dist = 4
+    for i in range(4):
+        if p1[i] == p2[i]: dist -= 1
+    return dist
+
+def solve(students):
+    # 가장 가까운 세 학생 사이의 심리적인 거리 구하기
+    mbti_dict = Counter(students)
         
-    return distance
+    # 특정 MBTI 3명이 있을 경우
+    for v in mbti_dict.values():
+        if v >= 3: return 0
+    
+    # 모든 mbti에 해당하는 사람들이 2명 이하인 경우, 학생 수가 32명 이하인 경우에 해당
+    res = 12 # 3 사람의 심리적인 거리
+    
+    for a, b, c in combinations(students, 3):
+        res = min(res, get_distance(a, b) + get_distance(b, c) + get_distance(c, a))
+    
+    return res
     
 if __name__ == "__main__":
-    testcase = int(input())
-    
-    for _ in range(testcase):
-        n = int(input())
-        people = input().split()
-        mbtis_dict = Counter(people)
-        mbtis = mbtis_dict.keys()
-        #print(mbtis_dict)
-        
-        distance = -1
-        if len(mbtis) == 1:
-            distance = 0
-        elif len(people) == 2:
-            a, b = people
-            distance = get_distance(a, b)
-        else:
-            if len(people) <= 32:
-                for a, b, c in combinations(people, 3):
-                    #print(a, b, c)
-
-                    cur_distance = get_distance(a, b, c)
-                    distance = cur_distance if distance == -1 else min(distance, cur_distance)  
-            else:
-                distance = 0                 
-            
-        print(distance)
+    for T in range(int(input())):
+        n = int(input()) # 학생의 수
+        students = input().split()
+        print(solve(students))
