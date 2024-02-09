@@ -1,4 +1,4 @@
-# [평번한 배낭](https://www.acmicpc.net/problem/12865)
+# [평범한 배낭](https://www.acmicpc.net/problem/12865)
 
 | 시간 제한 | 메모리 제한 | 난이도 |
 | :-------: | :---------: | :----: |

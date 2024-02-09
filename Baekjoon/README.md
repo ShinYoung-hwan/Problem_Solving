@@ -2,21 +2,46 @@
 
 ## Resolve
 
-- [Problem_1065: 한수](Problem_1000~1999/Problem_1065)
-- [Problem_10814: 나이순 정렬](Problem_10000~10999/Problem_10814)
-- [Problem_1904: 01타일](Problem_1000~1999/Problem_1904)
-- [Problem_4375: 1](Problem_4000~4999/Problem_4375)
-- [Problem_17427: 약수의합 2](Problem_17000~17999/Problem_17427/)
-- [Problem_17425: 약수의 합](Problem_17000~17999/Problem_17425/)
-- [Problem_1654: 랜선자르기](Problem_1000~1999/Problem_1654)
-- [Problem_1463: 1로만들기](Problem_1000~1999/Problem_1463)
-- [Problem_2579: 계단 오르기](Problem_2000~2999/Problem_2579)
-- [Problem_2805: 나무자르기](Problem_2000~2999/Problem_2805)
-- [Problem_5525: IOIOI](Probme_5000~5999/Problem_5525)
-- [Problem_7662: 이중 우선순위 큐](Problem_7000~7999/Problem_7662)
-- [Problem_1629: 곱셈](Problem_1000~1999/Problem_1629/)
-- [Problem_1918: 후위표기식](Problem_1000~1999/Problem_1918/)
-- [Problem_17626: Four Squares](Problem_17000~17999/Problem_17626/)
+- CLASS 3
+
+  - 핵심 IDEA
+    - 무가중 그래프를 이해하고 DFS와 BFS를 적절하게 사용할 수 있는가
+    - 힙과 우선순위 큐 자료구조를 이해하고 있는가
+    - 간단한 재귀식을 찾아낼 수 있는가
+    - 피보나치 수열을 활용한 다이나믹 프로그래밍 문제를 풀 수 있는가
+    - 비트마스킹의 기본을 이해하고 있는가
+  - [Problem_1074: Z](Problem_1000~1999/Problem_1074/)
+  - [Problem_1107: 리모컨](Problem_1000~1999/Problem_1107/)
+  - [Problem_1463: 1로 만들기](Problem_1000~1999/Problem_1463/)
+  - [Problem_2579: 계단 오르기](Problem_2000~2999/Problem_2579/)
+  - [Problem_5525: IOIOI](Problem_5000~5999/Problem_5525/)
+  - [Problem_6064: 카잉달력](Problem_6000~6999/Problem_6064/)
+  - [Problem_7662: 이중 우선순위 큐](Problem_7000~7999/Problem_7662/)
+  - [Problem_9019: DSLR](Problem_9000~9999/Problem_9019/)
+  - [Problem_9095: 1, 2, 3 더하기](Problem_9000~9999/Problem_9095/)
+  - [Problem_11403: 경로찾기](Problem_11000~11999/Problem_11403/)
+  - [Problem_11723: 집합](Problem_11000~11999/Problem_11723/)
+  - [Problem_11727: 2xn 타일링](Problem_11000~11999/Problem_11727/)
+  - [Problem_14500: 테트로미노](Problem_14000~14999/Problem_14500/)
+  - [Problem_17626: Four Squares](Problem_17000~17999/Problem_17626/)
+  - [Problem_20529: 가장 가까운 세 사람의 심리적 거리](Problem_20000~20999/Problem_20529/)
+
+- Others
+  - [Problem_1065: 한수](Problem_1000~1999/Problem_1065)
+  - [Problem_10814: 나이순 정렬](Problem_10000~10999/Problem_10814)
+  - [Problem_1904: 01타일](Problem_1000~1999/Problem_1904)
+  - [Problem_4375: 1](Problem_4000~4999/Problem_4375)
+  - [Problem_17427: 약수의합 2](Problem_17000~17999/Problem_17427/)
+  - [Problem_17425: 약수의 합](Problem_17000~17999/Problem_17425/)
+  - [Problem_1654: 랜선자르기](Problem_1000~1999/Problem_1654)
+  - [Problem_1463: 1로만들기](Problem_1000~1999/Problem_1463)
+  - [Problem_2579: 계단 오르기](Problem_2000~2999/Problem_2579)
+  - [Problem_2805: 나무자르기](Problem_2000~2999/Problem_2805)
+  - [Problem_5525: IOIOI](Probme_5000~5999/Problem_5525)
+  - [Problem_7662: 이중 우선순위 큐](Problem_7000~7999/Problem_7662)
+  - [Problem_1629: 곱셈](Problem_1000~1999/Problem_1629/)
+  - [Problem_1918: 후위표기식](Problem_1000~1999/Problem_1918/)
+  - [Problem_17626: Four Squares](Problem_17000~17999/Problem_17626/)
 
 ## 공부해야할 부분
 
