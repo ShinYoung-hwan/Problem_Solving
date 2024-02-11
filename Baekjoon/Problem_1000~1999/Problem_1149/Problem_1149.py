@@ -1,24 +1,19 @@
 import sys
 
-input = lambda : sys.stdin.readline().rstrip()  
+input = lambda: sys.stdin.readline().rstrip()
+inputs = lambda: sys.stdin.readlines()
+
+if __name__ == "__main__": 
+    n = int(input()) # 집의 수
+    rgb_cost = [ [ int(e) for e in line.split() ] for line in inputs() ] # 각 집의 색깔을 r, g, b로 색칠할 때의 비용
     
-if __name__ == "__main__":
-    n = int(input()) # n개의 집
+    # 각 집의 색을 r, g, b로 할 때의 최소 비용 케이스
+    dp = [ [0, 0, 0] for _ in range(n) ]
+    dp[0][0], dp[0][1], dp[0][2] = rgb_cost[0][0], rgb_cost[0][1], rgb_cost[0][2]
     
-    houses = list() # 집들의 색칠 cost
-    for _ in range(n):
-        r, g, b = map(int, input().split()) # 각 집을 r, g, b 중 하나로 색칠할 때 해당 색깔의 cost
-        house = [0, 0, 0]
-        house[0], house[1], house[2] = r, g, b # (0:R), (1:G), (2:B)
-        houses.append(house)
-    
-    res = [[houses[0][0], houses[0][1], houses[0][2]]] # 0에서 R, G, B를 선택했을 때의 값.
     for i in range(1, n):
-        minimun = list()
-        minimun.append(min(res[i-1][1]+houses[i][0], res[i-1][2]+houses[i][0])) # i번째에서 R을 선택할 때
-        minimun.append(min(res[i-1][0]+houses[i][1], res[i-1][2]+houses[i][1])) # i번째에서 G을 선택할 때
-        minimun.append(min(res[i-1][0]+houses[i][2], res[i-1][1]+houses[i][2])) # i번째에서 B을 선택할 때
-        res.append(minimun)
-        
-    print(min(res[-1]))
+        dp[i][0] = min(dp[i-1][1], dp[i-1][2]) + rgb_cost[i][0]
+        dp[i][1] = min(dp[i-1][0], dp[i-1][2]) + rgb_cost[i][1]
+        dp[i][2] = min(dp[i-1][0], dp[i-1][1]) + rgb_cost[i][2]
     
+    print(min(dp[n-1]))
