@@ -2,19 +2,29 @@
 
 using namespace std;
 
+void print_arr(const int *arr, const int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << ' ';
+    }
+    cout << endl;
+}
+
 void bubble_sort(int *arr, const int n)
 {
-
     int tmp;
-    for (int i = n - 1; i >= 0; i--)
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < i; j++)
+        for (int j = 0; j < n - i - 1; j++)
         {
-            if (arr[i] < arr[j])
+            if (arr[j] > arr[j + 1])
             {
-                tmp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = tmp;
+                tmp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = tmp;
+                printf("Swap %dth, %dth\t", j + 1, j + 2);
+                print_arr(arr, n);
             }
         }
     }
@@ -22,15 +32,13 @@ void bubble_sort(int *arr, const int n)
 
 int main()
 {
-    int arr[] = {8, 4, 1, 3, 2, 5, 6, 7};
-    int n = 8;
-
+    int n = 5;
+    int arr[] = {3, 4, 2, 1, 5};
+    cout << "Before Sort:\t";
+    print_arr(arr, n);
     bubble_sort(arr, n);
-
-    for (int arri : arr)
-    {
-        cout << arri << ' ';
-    }
+    cout << "After Sort:\t";
+    print_arr(arr, n);
 
     return 0;
 }
