@@ -1,58 +1,38 @@
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
-vector<int> insertionSort(vector<int> array)
-{
-    /* the time complexity is O(N^2) */
-    
-    int len = array.size();
-
-    for(int i = 0; i < len; i++)
-    {
-        int target = array[i];
-        for(int j = i - 1; j >= 0; j--)
-        {   
-            if(target > array[j])
-            {
-                array[j + 1] = target;
-                break;
-            }
-            else
-            {
-                array[j + 1] = array[j];
-            }
-        }
+void print_arr(const int *arr, const int n){
+    for (int i = 0; i < n; i++){
+        cout << arr[i] << ' ';
     }
-
-    return array; /* After sort */
+    cout << endl;
 }
 
-void printElements(const vector<int> &array)
-{
-    for(auto element : array)
-    {
-        cout << element << ' ';
-    }    
-    cout << endl;
+void insertionSort(int *arr, const int n){
+    int cur, j;
+    for (int i = 1; i < n; i++){
+        cur = arr[j=i];
+        while (--j >= 0 && cur < arr[j]){
+            arr[j+1] = arr[j];
+        }
+        arr[j+1] = cur;
+
+        printf("Insert %dth, %dth\t", i+1, j+2);
+        print_arr(arr, n);
+    }
 }
 
 int main(void)
 {
-    vector<int> before = {1, 5, 3, 7, 9, 6, 5, 4, 5};
+    int n = 5;
+    int arr[] = {3, 4, 2, 1, 5};
 
-    cout << "Before address:\t" << &before << endl;
-    cout << "Before:\t";
-    printElements(before);
-
-    vector<int> after = before; /* DeepCopy */
-    cout << "After address:\t" << &after << endl;
-    cout << "After:\t";
-    after = insertionSort(after);
-    printElements(after);
-    
-    cout << "Answer:\t1 3 4 5 5 5 6 7 9" << endl;
+    cout << "Before Sort:\t";
+    print_arr(arr, n);
+    insertionSort(arr, n);
+    cout << "After Sort:\t";
+    print_arr(arr, n);
 
     return 0;
 }
