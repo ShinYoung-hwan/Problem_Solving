@@ -12,7 +12,7 @@ def solve(graph, n, dist, src=1):
     for check in range(n):
         for cur in range(1, n+1):
             for next, next_weight in graph[cur]:
-                if dist[next] > dist[cur] + next_weight:
+                if dist[next] > dist[cur] + next_weight: # 경로 최신화 여부 결정
                     dist[next] = dist[cur] + next_weight
                     if check == n-1: # 음수 사이클 존재
                         return "YES"
