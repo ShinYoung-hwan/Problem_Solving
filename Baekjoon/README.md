@@ -55,6 +55,7 @@
   - [Problem_1043: 거짓말](Problem_1000~1999/Problem_1043/)
   - [Problem_1629: 곱셈](Problem_1000~1999/Problem_1629/)
   - [Problem_1865: 웜홀](Problem_1000~1999/Problem_1865/)
+  - [Problem_1918: 후위표기식](Problem_1000~1999/Problem_1918/)
 
 - CLASS 5
 
