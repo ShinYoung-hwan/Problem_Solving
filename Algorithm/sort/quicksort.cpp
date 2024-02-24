@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void quick_sort(int* arr, const int n) {
+void quick_sort(int* arr, const int n, const int left, const int right) {
 
 }
 
@@ -18,7 +18,7 @@ int main() {
 
     cout << "Before Sort:\t";
     print_arr(arr, n);
-    quick_sort(arr, n);
+    quick_sort(arr, n, 0, n-1);
     cout << "After Sort:\t";
     print_arr(arr, n);
 
