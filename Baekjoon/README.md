@@ -56,6 +56,7 @@
   - [Problem_1629: 곱셈](Problem_1000~1999/Problem_1629/)
   - [Problem_1865: 웜홀](Problem_1000~1999/Problem_1865/)
   - [Problem_1918: 후위표기식](Problem_1000~1999/Problem_1918/)
+  - [Problem_2638: 치즈](Problem_2000~2999/Problem_2638/)
 
 - CLASS 5
 
@@ -72,8 +73,6 @@
   - [Problem_4375: 1](Problem_4000~4999/Problem_4375)
   - [Problem_17427: 약수의합 2](Problem_17000~17999/Problem_17427/)
   - [Problem_17425: 약수의 합](Problem_17000~17999/Problem_17425/)
-  - [Problem_2579: 계단 오르기](Problem_2000~2999/Problem_2579)
-  - [Problem_1918: 후위표기식](Problem_1000~1999/Problem_1918/)
 
 ## 공부해야할 부분
 
