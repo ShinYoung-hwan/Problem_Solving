@@ -59,6 +59,7 @@
   - [Problem_1918: 후위표기식](Problem_1000~1999/Problem_1918/)
   - [Problem_2638: 치즈](Problem_2000~2999/Problem_2638/)
   - [Problem_5639: 이진 검색 트리](Problem_5000~5999/Problem_5639/)
+  - [Problem_30805: 사전 순 최대 공통 부분 수열](Problem_30000~30999/Problem_30805/)
 
 - CLASS 5
 
