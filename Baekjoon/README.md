@@ -76,6 +76,7 @@
   - [Problem_4375: 1](Problem_4000~4999/Problem_4375)
   - [Problem_17427: 약수의합 2](Problem_17000~17999/Problem_17427/)
   - [Problem_17425: 약수의 합](Problem_17000~17999/Problem_17425/)
+  - [Problem_3161: izbori](Problem_3000~3999/Problem_3161/)
 
 ## 공부해야할 부분
 
