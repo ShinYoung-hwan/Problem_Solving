@@ -68,6 +68,8 @@
     - 최소 스패닝 트리를 찾는 알고리즘(프림 알고리즘, 크루스칼 알고리즘)을 이해하고 적용할 수 있는가
   - [Problem_1005: ACM Craft](Problem_1000~1999/Problem_1005/)
   - [Problem_1197: 최소 스패닝 트리](Problem_1000~1999/Problem_1197/)
+  - [Problem_1202: 보석 도둑](Problem_1000~1999/Problem_1202/)
+  - [Problem_1509: 팰린드롬 분할](Problem_1000~1999/Problem_1509/)
 
 - Others
   - [Problem_1065: 한수](Problem_1000~1999/Problem_1065)
