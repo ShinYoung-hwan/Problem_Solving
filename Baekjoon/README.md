@@ -79,6 +79,7 @@
   - [Problem_17427: 약수의합 2](Problem_17000~17999/Problem_17427/)
   - [Problem_17425: 약수의 합](Problem_17000~17999/Problem_17425/)
   - [Problem_3161: izbori](Problem_3000~3999/Problem_3161/)
+  - [Problem_15788: 밸런스 스톤](Problem_15000~15999/Problem_15788/)
 
 ## 공부해야할 부분
 
