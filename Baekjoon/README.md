@@ -81,6 +81,8 @@
   - [Problem_3161: izbori](Problem_3000~3999/Problem_3161/)
   - [Problem_15788: 밸런스 스톤](Problem_15000~15999/Problem_15788/)
   - [Problem_30924: A+B - 10 (제2편)](Problem_30000~3099/Problem_30924/)
+  - [Problem_1912: 연속합](Problem_1000~1999/Problem_1912/)
+  - [Problem_10844: 쉬운 계단수](Problem_10000~10999/Problem_10844/)
 
 ## 공부해야할 부분
 
