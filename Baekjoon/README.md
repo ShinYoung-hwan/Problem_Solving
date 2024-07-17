@@ -83,9 +83,11 @@
   - [Problem_30924: A+B - 10 (제2편)](Problem_30000~3099/Problem_30924/)
   - [Problem_1912: 연속합](Problem_1000~1999/Problem_1912/)
   - [Problem_10844: 쉬운 계단수](Problem_10000~10999/Problem_10844/)
+  - [Problem_2156: 포도주 시식](Problem_2000~2999/Problem_2156/)
 
 ## 공부해야할 부분
 
+- 다이나믹 프로그래밍
 - 플로이드 워셜 알고리즘
 - KMP 알고리즘
 - 중국인의 나머지 정리

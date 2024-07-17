@@ -34,7 +34,6 @@ if __name__ == "__main__":
         print("unvalid submission.", end=' ')
         
     # get file  
-    
     find_directory = os.path.join(".", "current_problem")
     files = os.listdir(find_directory)
     py_file = get_py_file(files)
