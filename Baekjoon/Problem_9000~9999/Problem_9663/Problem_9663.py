@@ -37,7 +37,6 @@ if __name__ == "__main__":
     
     # 각 row에서 몇번째 col에 위치시킬 건지
     board = [-1] * N
-    # solve(board, N)
     
     # search half
     for i in range(N // 2):

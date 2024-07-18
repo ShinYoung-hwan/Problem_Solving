@@ -60,6 +60,7 @@
   - [Problem_2638: 치즈](Problem_2000~2999/Problem_2638/)
   - [Problem_5639: 이진 검색 트리](Problem_5000~5999/Problem_5639/)
   - [Problem_30805: 사전 순 최대 공통 부분 수열](Problem_30000~30999/Problem_30805/)
+  - [Problem_9935: 문자열 폭발](Problem_9000~9999/Problem_9935/)
 
 - CLASS 5
 
@@ -84,6 +85,7 @@
   - [Problem_1912: 연속합](Problem_1000~1999/Problem_1912/)
   - [Problem_10844: 쉬운 계단수](Problem_10000~10999/Problem_10844/)
   - [Problem_2156: 포도주 시식](Problem_2000~2999/Problem_2156/)
+  - [Problem_2565: 전깃줄](Problem_2000~2999/Problem_2565/)
 
 ## 공부해야할 부분
 
@@ -95,3 +97,4 @@
 - 분리 집합(Disjoint Set)
 - 배낭 문제
 - 위상 정렬
+- LIS(Longest Increasing Subsequence)
