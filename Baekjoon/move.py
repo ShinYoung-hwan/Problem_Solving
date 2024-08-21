@@ -12,6 +12,11 @@ def get_py_file(files: list):
         if file.find(".py") != -1:
             return file
         
+def get_cpp_file(files: list):
+    for file in files:
+        if file.find(".cpp") != -1:
+            return file
+        
 def get_src_dst_num(num: int):
     snum = str(num)
     length = len(snum)
@@ -37,21 +42,29 @@ if __name__ == "__main__":
     find_directory = os.path.join(".", "current_problem")
     files = os.listdir(find_directory)
     py_file = get_py_file(files)
+    cpp_file = get_cpp_file(files)
     
     # rename file
     os.rename(
         os.path.join(find_directory, py_file),
         os.path.join(find_directory, f"Problem_{args.num}.py") 
     )
+    if cpp_file is not None:
+        os.rename(
+            os.path.join(find_directory, cpp_file),
+            os.path.join(find_directory, f"Problem_{args.num}.cpp") 
+        )
     
     # dest directory check
     src, dst = get_src_dst_num(args.num)
     first_dest_directory = os.path.join(".", f"Problem_{src}~{dst}")
-    if not os.path.exists(first_dest_directory):
-        os.makedirs(first_dest_directory)
-    
+
     # copy
+    final_dest_directory = os.path.join(first_dest_directory, f"Problem_{args.num}")
+    if os.path.exists(final_dest_directory):
+        shutil.rmtree(final_dest_directory)
+    
     shutil.copytree(
         os.path.join(find_directory),
-        os.path.join(first_dest_directory, f"Problem_{args.num}")
+        final_dest_directory
     )

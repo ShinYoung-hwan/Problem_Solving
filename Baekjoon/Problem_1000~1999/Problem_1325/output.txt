@@ -1,0 +1,2 @@
+python3 Problem_1325.py < input.txt
+10
