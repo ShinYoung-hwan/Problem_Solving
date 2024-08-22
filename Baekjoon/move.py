@@ -5,6 +5,7 @@ import shutil
 def argument_parse():
     args = argparse.ArgumentParser()
     args.add_argument("num", type=int)
+    # args.add_argument("file", type=str, default='all')
     return args.parse_args()
 
 def get_py_file(files: list):
