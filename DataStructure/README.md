@@ -1,5 +1,6 @@
 # Datastructures Repository
- - Covering basic datastrutures using c style codes.
+
+- Covering basic datastrutures using c style codes.
 
 ## [Stack](./stack/)
 
@@ -20,3 +21,5 @@
 ## [AVL Tree]()
 
 ## [Red Black Tree]()
+
+## [Segment Tree](./segment_tree/)
