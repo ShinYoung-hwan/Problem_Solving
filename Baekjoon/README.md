@@ -87,7 +87,9 @@
   - [Problem_2156: 포도주 시식](Problem_2000~2999/Problem_2156/)
   - [Problem_2565: 전깃줄](Problem_2000~2999/Problem_2565/)
   - [Problem_10986: 나머지 합](Problem_10000~10999/Problem_10986/)
-  - [Problem_2293: 동전1](Problem_2000~2999/Problem_2293/)
+  - [Problem_2293: 동전1](Problem_2000~2999/Problem_2293/)\
+  - [Problem_2493: 탑](Problem_2000~2999/Problem_2493)
+  - [Problem_2110: 공유기 설치](Problem_2000~2999/Problem_2110/)
 
 ## 공부해야할 부분
 
