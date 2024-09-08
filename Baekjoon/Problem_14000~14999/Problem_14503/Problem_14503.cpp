@@ -1,14 +1,14 @@
 #include <cstdio>
 
-const int MAXNM = 50;
+const int MAXRC = 50;
 
 enum { NORTH, EAST, SOUTH, WEST };
 
 using namespace std;
 int R, C;
-int isWall[MAXNM][MAXNM];
+int isWall[MAXRC][MAXRC];
 
-bool isNearClear(bool isClear[MAXNM][MAXNM], const int r0, const int c0) {
+bool isNearClear(bool isClear[MAXRC][MAXRC], const int r0, const int c0) {
     // NORTH
     if (!isClear[r0-1][c0]) return false;
     // EAST
@@ -51,7 +51,7 @@ inline int turn_cclockwise_90(const int d) {
 
 int solve(int r0, int c0, int d) {
     int cnt = 0;
-    bool isClear[MAXNM][MAXNM];
+    bool isClear[MAXRC][MAXRC];
     for (int r = 0; r <= R; r++) {
         for (int c = 0; c <= C; c++) {
             isClear[r][c] = isWall[r][c] ? true : false;
