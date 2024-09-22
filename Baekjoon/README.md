@@ -90,6 +90,7 @@
   - [Problem_2293: 동전1](Problem_2000~2999/Problem_2293/)\
   - [Problem_2493: 탑](Problem_2000~2999/Problem_2493)
   - [Problem_2110: 공유기 설치](Problem_2000~2999/Problem_2110/)
+  - [Problem_19598: 최소 회의실 개수](Problem_19000~19999/Problem_19598/)
 
 ## 공부해야할 부분
 
