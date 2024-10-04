@@ -12,7 +12,7 @@ int main() {
     for (int i = 0; i < N; i++) scanf("%d", &A[i]);
     int B, C; scanf("%d %d", &B, &C);
 
-    uint64_t _sum = 0;
+    int64_t _sum = 0;
     for (int i = 0; i < N; i++) {
         _sum += 1;
         A[i] -= B;
