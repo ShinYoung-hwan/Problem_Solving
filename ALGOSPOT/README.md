@@ -4,3 +4,5 @@
 - [boggle](./boggle/)
 - [picnic](./picnic/)
 - [boardcover](./boardcover/)
+- [**clocksync**](./clocksync)
+- [Traveling Salesman problem(TSP)](./tsp)
