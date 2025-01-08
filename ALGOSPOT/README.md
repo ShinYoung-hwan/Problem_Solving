@@ -6,3 +6,5 @@
 - [boardcover](./boardcover/)
 - [**clocksync**](./clocksync)
 - [Traveling Salesman problem(TSP)](./tsp)
+- [**quadtree**](./quadtree/)
+- [**fence**](./fence/)
