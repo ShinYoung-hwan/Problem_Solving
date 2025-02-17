@@ -30,6 +30,8 @@ def get_src_dst_num(num: int):
 if __name__ == "__main__":
     # input checking
     args = argument_parse()
+    
+    
     while True:
         s = input(f"Is it right problem number({args.num})? Y/N: ").capitalize()
         if s == "Y": break
@@ -44,17 +46,6 @@ if __name__ == "__main__":
     files = os.listdir(find_directory)
     py_file = get_py_file(files)
     cpp_file = get_cpp_file(files)
-    
-    # rename file
-    os.rename(
-        os.path.join(find_directory, py_file),
-        os.path.join(find_directory, f"Problem_{args.num}.py") 
-    )
-    if cpp_file is not None:
-        os.rename(
-            os.path.join(find_directory, cpp_file),
-            os.path.join(find_directory, f"Problem_{args.num}.cpp") 
-        )
     
     # dest directory check
     src, dst = get_src_dst_num(args.num)
